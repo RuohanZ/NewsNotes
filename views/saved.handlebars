@@ -1,0 +1,50 @@
+<nav class="navbar navbar-lg navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand">Scraping The Economist</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a id="home-link" class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <button id="clear-btn" type="button" class="btn btn-secondary">Clear Articles</button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+    <div class="jumbotron">
+        <div class="row">
+      <div class="col">
+        <h2>Your News</h2>
+      </div>
+    </div>
+    <div class="row">
+      {{#each Articles}}{{#if saved}}
+      <div class="col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{title}}</h5>
+            <p id="description">{{description}}</p>
+            <a  data-id={{_id}} class="btn btn-primary delete-btn">Delete</a>
+            <h6>Notes:</h6>
+            {{#each notes}}
+            <p id="notes">{{body}}</p>
+            <p class="date">{{date}}</p>
+            {{/each}}
+            <input type="text" class="form-control newNote">
+            <a data-id={{_id}} class="btn btn-primary add-btn">Add Note</a>
+          </div>
+        </div>
+      </div>
+      {{/if}}{{/each}}
+    </div>
+    </div>
+</div>
+
+<script src="/js/home.js"></script>
