@@ -10,7 +10,7 @@
 
 * The user can further add/view nodes to or delete saved articles.
 
-* The user can scrape more articles, see their "Saved Articles" or clear all the articles by clicking buttons in the nav bar;top navigation bar and may add notes to articles they have saved.
+* The user can scrape more articles, see their "Saved Articles" or clear all the articles by clicking buttons in the nav bar.
 
 ## Technologies Used
 
